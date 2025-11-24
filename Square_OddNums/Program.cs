@@ -14,8 +14,14 @@ namespace Square_OddNums
 
             Console.WriteLine(string.Join(", ", oddNumbers));
 
-            Console.WriteLine(GetString(n));
+            Console.WriteLine(GetSquare(n));
         }
+
+        /// <summary>
+        /// Создает список нечетных чисел в диапазоне от 1 до <paramref name="n"/>.
+        /// </summary>
+        /// <param name="n">Граница диапазона.</param>
+        /// <returns>список с нечетных чисел от 1 до <paramref name="n"/>.</returns>
         static List<int> GetOddNumbers(int n)
         {
             List<int> numbers = new List<int>();
@@ -29,7 +35,12 @@ namespace Square_OddNums
             return numbers;
         }
 
-        static string GetString(int n)
+        /// <summary>
+        /// Создает квадрат, заполненный символом "X" со сторонами длиной <paramref name="n"/>.
+        /// </summary>
+        /// <param name="n">Длина сторон квадрата.</param>
+        /// <returns>квадрат.</returns>
+        static string GetSquare(int n)
         {
             string str = "";
 
