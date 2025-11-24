@@ -8,9 +8,14 @@
 
             int n = Int32.Parse(Console.ReadLine());
 
-            Console.WriteLine(GetString2(n));
+            Console.WriteLine(GetEmptySquare(n));
         }
-        static string GetString2(int n)
+        /// <summary>
+        /// Создает пустой квадрат со сторонами длиной <paramref name="n"/>.
+        /// </summary>
+        /// <param name="n">Длина сторон квадрата.</param>
+        /// <returns>пустой квадрат.</returns>
+        static string GetEmptySquare(int n)
         {
             string str = "";
 
