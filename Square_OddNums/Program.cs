@@ -21,9 +21,11 @@ namespace Square_OddNums
         /// Создает список нечетных чисел в диапазоне от 1 до <paramref name="n"/>.
         /// </summary>
         /// <param name="n">Граница диапазона.</param>
-        /// <returns>список с нечетных чисел от 1 до <paramref name="n"/>.</returns>
+        /// <returns>список нечетных чисел от 1 до <paramref name="n"/>.</returns>
         static List<int> GetOddNumbers(int n)
         {
+            CheckValueGreaterThan(n, "Ожидается, что вводное число больше 1.", nameof(n));
+
             List<int> numbers = new List<int>();
 
             for (int i = 1; i <= n; i++)
@@ -36,25 +38,36 @@ namespace Square_OddNums
         }
 
         /// <summary>
-        /// Создает квадрат, заполненный символом "X" со сторонами длиной <paramref name="n"/>.
+        /// Создает квадрат, заполненный символом 'X' со сторонами длиной <paramref name="n"/>.
         /// </summary>
         /// <param name="n">Длина сторон квадрата.</param>
         /// <returns>квадрат.</returns>
         static string GetSquare(int n)
         {
-            string str = "";
+            CheckValueGreaterThan(n, "Ожидается, что длина стороны больше 0.", nameof(n));
+
+            string square = "";
 
             for (int i = 1; i <= n; i++)
             {
                 for (int j = 1; j <= n; j++)
                 {
-                    str += "X";
+                    square += "X";
                 }
 
-                str += "\n";
+                square += "\n";
             }
 
-            return str;
+            return square;
+        }
+
+        public static void CheckValueGreaterThan(int value, string message,
+            string paramName, double limit = 1)
+        {
+            if (value < limit)
+            {
+                throw new ArgumentException(message, paramName);
+            }
         }
     }
 }

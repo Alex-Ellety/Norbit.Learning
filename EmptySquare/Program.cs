@@ -1,4 +1,6 @@
-﻿namespace EmptySquare
+﻿using System.Text;
+
+namespace EmptySquare
 {
     internal class Program
     {
@@ -17,20 +19,39 @@
         /// <returns>пустой квадрат.</returns>
         static string GetEmptySquare(int n)
         {
-            string str = "";
+            CheckValueGreaterThan(n, "Ожидается, что длина стороны больше 0", nameof(n));
+
+            string square = "";
+
+            string topAndBottom = new string('X', n);
+
+            StringBuilder emptyMiddle = new StringBuilder();
+            emptyMiddle.Append('X');
+            emptyMiddle.Append(new string(' ', n - 2));
+            emptyMiddle.Append('X');
+
+            string middle = emptyMiddle.ToString();
 
             for (int i = 1; i <= n; i++)
             {
-                for (int j = 1; j <= n; j++)
-                    if (i == 1 || i == n || j == 1 || j == n)
-                        str += "X";
-                    else
-                        str += " ";
+                if (i == 1 || i == n)
+                    square += topAndBottom;
+                else
+                    square += middle;
 
-                str += "\n";
+                square += "\n";
             }
 
-            return str;
+            return square;
+        }
+
+        public static void CheckValueGreaterThan(int value, string message,
+            string paramName, int limit = 1)
+        {
+            if (value <= limit)
+            {
+                throw new ArgumentException(message, paramName);
+            }
         }
 
     }

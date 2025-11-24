@@ -4,41 +4,51 @@
     {
         static void Main(string[] args)
         {
-            string s = Console.ReadLine();
+            Console.WriteLine("Введите слово: ");
 
-            Console.WriteLine(HasHello(s));
+            string value = Console.ReadLine();
+
+            Console.WriteLine(HasWord(value, "hello"));
         }
+
         /// <summary>
-        /// Определяет можно ли получить "hello", удалив некоторые буквы из слова <paramref name="s"/>.
+        /// Определяет можно ли получить <paramref name="targetWord"/>, удалив некоторые буквы из <paramref name="value"/>.
         /// </summary>
-        /// <param name="s">слово.</param>
-        /// <returns>"YES", если удалось найти "hello", в противном случае "NO".</returns>
-        static string HasHello(string s)
+        /// <param name="value">слово.</param>
+        /// <returns>true, если удалось найти <paramref name="targetWord"/>, в противном случае false.</returns>
+        static bool HasWord(string value, string targetWord)
         {
-            string s1 = "hello";
-            int initial = 0;
+            CheckValueGreaterThan(value, "Ожидается, строка не будет пустой.", nameof(value));
+
+            int initIndex = 0;
 
             List<char> chars = new List<char>();
 
-            for (int i = 0; i < s1.Length; i++)
+            for (int i = 0; i < targetWord.Length; i++)
             {
-                for (int j = initial; j < s.Length; j++)
+                for (int j = initIndex; j < value.Length; j++)
                 {
-                    if (s[j] == s1[i])
+                    if (value[j] == targetWord[i])
                     {
-                        chars.Add(s[j]);
-                        initial = j + 1;
+                        chars.Add(value[j]);
+                        initIndex = j + 1;
                         break;
-                    }                                     
+                    }
                 }
             }
 
             string result = string.Join("", chars);
 
-            if (result == s1)
-                return "YES";
-            else
-                return "NO";
+            return result == targetWord;
+        }
+
+        public static void CheckValueGreaterThan(string value, string message,
+            string paramName, double limit = 1)
+        {
+            if (value.Length < limit)
+            {
+                throw new ArgumentException(message, paramName);
+            }
         }
     }
 }
