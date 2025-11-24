@@ -8,7 +8,11 @@
 
             Console.WriteLine(HasHello(s));
         }
-
+        /// <summary>
+        /// Определяет можно ли получить "hello", удалив некоторые буквы из слова <paramref name="s"/>.
+        /// </summary>
+        /// <param name="s">слово.</param>
+        /// <returns>"YES", если удалось найти "hello", в противном случае "NO".</returns>
         static string HasHello(string s)
         {
             string s1 = "hello";
