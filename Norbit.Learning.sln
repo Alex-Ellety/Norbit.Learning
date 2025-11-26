@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36518.9 d17.14
+VisualStudioVersion = 17.14.36518.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Norbit.Learning", "Norbit.Learning.csproj", "{6455DC62-4ED1-1955-DBBC-920516A51D13}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hhheeeelllloooooouuu", "hhheeeelllloooooouuu\hhheeeelllloooooouuu.csproj", "{7BD372F9-FC06-DC06-7E39-E491D511F2CA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Square_OddNums", "Square_OddNums\Square_OddNums.csproj", "{878D313F-410B-3F7D-930B-DC9C7BE7D6F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Figures", "..\Norbit.Learning\Figures\Figures.csproj", "{22672B2B-86F7-FCB2-7133-12C9D12821E7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{878D313F-410B-3F7D-930B-DC9C7BE7D6F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{878D313F-410B-3F7D-930B-DC9C7BE7D6F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{878D313F-410B-3F7D-930B-DC9C7BE7D6F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22672B2B-86F7-FCB2-7133-12C9D12821E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22672B2B-86F7-FCB2-7133-12C9D12821E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22672B2B-86F7-FCB2-7133-12C9D12821E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22672B2B-86F7-FCB2-7133-12C9D12821E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
