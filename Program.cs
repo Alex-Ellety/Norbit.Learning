@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Linq;
+using System.Text;
 
 namespace Norbit.Learning
 {
@@ -149,7 +150,7 @@ namespace Norbit.Learning
             CheckValueIsOdd(n, "Ожидается, что число будет нечетное.", nameof(n));
 
             char[][] matrix = new char[n][];
-            string result = "";
+            StringBuilder result = new StringBuilder();
             int center = n / 2;
 
             for (int i = 0; i < n; i++)
@@ -179,12 +180,12 @@ namespace Norbit.Learning
             {
                 for (int j = 0; j < n; j++)
                 {
-                    result += matrix[i][j];
+                    result.Append(matrix[i][j]);
                 }
-                result += "\n";
+                result.Append("\n");
             }
 
-            return result;
+            return result.ToString();
         }
 
         /// <summary>
@@ -200,7 +201,7 @@ namespace Norbit.Learning
             CheckValueIsOdd(n, "Ожидается, что число будет нечетное.", nameof(n));
 
             char[][] matrix = new char[n][];
-            string result = "";
+            StringBuilder result = new StringBuilder();
 
             for (int i = 0; i < n; i++)
             {
@@ -226,12 +227,12 @@ namespace Norbit.Learning
             {
                 for (int j = 0; j < n; j++)
                 {
-                    result += matrix[i][j];
+                    result.Append(matrix[i][j]);
                 }
-                result += "\n";
+                result.Append("\n");
             }
 
-            return result;
+            return result.ToString();
         }
 
         /// <summary>
@@ -247,7 +248,7 @@ namespace Norbit.Learning
             CheckValueIsOdd(n, "Ожидается, что число будет нечетное.", nameof(n));
 
             char[][] matrix = new char[n][];
-            string result = "";
+            StringBuilder result = new StringBuilder();
             int center = n / 2;
 
             for (int i = 0; i < n; i++)
@@ -276,14 +277,23 @@ namespace Norbit.Learning
             {
                 for (int j = 0; j < n; j++)
                 {
-                    result += matrix[i][j] + " ";
+                    result.Append(matrix[i][j]);
                 }
-                result += "\n";
+                result.Append("\n");
             }
 
-            return result;
+            return result.ToString();
         }
 
+        /// <summary>
+        /// Проверяет, что входные данные <paramref name="value"/> больше <paramref name="limit"/> 
+        /// и выводит <paramref name="message"/> при ошибке.
+        /// </summary>
+        /// <param name="value">Входные данные.</param>
+        /// <param name="message">Сообщение ошибки.</param>
+        /// <param name="paramName">Параметр, где произошла ошибка.</param>
+        /// <param name="limit">Недопустимое значение.</param>
+        /// <exception cref="ArgumentException"></exception>
         public static void CheckValueGreaterThan(int value, string message,
             string paramName, int limit = 0)
         {
@@ -292,6 +302,14 @@ namespace Norbit.Learning
                 throw new ArgumentException(message, paramName);
             }
         }
+
+        /// <summary>
+        /// Проверяет число <paramref name="value"/> на нечетность и выводит <paramref name="message"/> при ошибке.
+        /// </summary>
+        /// <param name="value">Входные данные для проверки.</param>
+        /// <param name="message">Сообщение ошибки.</param>
+        /// <param name="paramName">Параметр, где произошла ошибка.</param>
+        /// <exception cref="ArgumentException"></exception>
         public static void CheckValueIsOdd(int value, string message,
             string paramName)
         {
