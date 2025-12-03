@@ -19,6 +19,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hhheeeelllloooooouuuTests",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shop", "Shop\Shop.csproj", "{46530B4E-E9B6-96A7-9756-090371D11B2E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL", "SQL", "{A2501DA2-6009-4900-ABBF-386936ACC0B6}"
+	ProjectSection(SolutionItems) = preProject
+		SQL\Выборка читателей-должников.sql = SQL\Выборка читателей-должников.sql
+		SQL\Запрос для выборки книг, которые находятся на руках на данный момент.sql = SQL\Запрос для выборки книг, которые находятся на руках на данный момент.sql
+		SQL\Запрос для выборки книг, которые ни разу не брали читать.sql = SQL\Запрос для выборки книг, которые ни разу не брали читать.sql
+		SQL\Запрос для выборки книг, которые чаще других берут читать.sql = SQL\Запрос для выборки книг, которые чаще других берут читать.sql
+		SQL\Запрос сколько книг выдал каждый сотрудник.sql = SQL\Запрос сколько книг выдал каждый сотрудник.sql
+		SQL\Топ издательств по числу выданных книг.sql = SQL\Топ издательств по числу выданных книг.sql
+		SQL\Топ издательств по числу книг.sql = SQL\Топ издательств по числу книг.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
