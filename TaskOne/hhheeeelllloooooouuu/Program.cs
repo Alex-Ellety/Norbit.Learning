@@ -4,11 +4,15 @@
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Введите слово: ");
+            Console.Write("Введите исходное слово: ");
 
             string value = Console.ReadLine();
 
-            Console.WriteLine(HasWord(value, "hello"));
+            Console.Write("Введите искомое слово: ");
+
+            string targetWord = Console.ReadLine();
+
+            Console.WriteLine(HasWord(value, targetWord));
         }
 
         /// <summary>
@@ -18,8 +22,8 @@
         /// <returns>true, если удалось найти <paramref name="targetWord"/>, в противном случае false.</returns>
         public static bool HasWord(string value, string targetWord)
         {
-            CheckValueGreaterThan(value, "Ожидается, строка не будет пустой.", nameof(value));
-
+            CheckValueGreaterThan(value, "Ожидается, что строка не будет пустой.", nameof(value));
+            CheckValueGreaterThan(targetWord, "Ожидается, что строка не будет пустой.", nameof(targetWord));
             int initIndex = 0;
 
             List<char> chars = new List<char>();

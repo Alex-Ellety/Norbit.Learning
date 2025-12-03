@@ -1,139 +1,17 @@
-﻿using System.Text;
+﻿using System.Linq;
+using System.Text;
 
-namespace Norbit.Learning
+namespace Figures
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.Write("Введите число: ");
+            Console.Write("Введите положительное нечётное целое число: ");
 
-            int n = Int32.Parse(Console.ReadLine());
+            int n = int.Parse(Console.ReadLine());
 
-            //Console.WriteLine(GetEmptySquare(n));
-
-            //string value = Console.ReadLine();
-
-            //Console.WriteLine(HasWord(value, "hello"));
-
-            //List<int> oddNumbers = GetOddNumbers(n);
-
-            //Console.WriteLine(string.Join(", ", oddNumbers));
-
-            //Console.WriteLine(GetSquare(n));
-
-            //Console.Write("Введите положительное нечётное целое число: ");
-
-            //int n = int.Parse(Console.ReadLine());
-
-            //Console.WriteLine(GetArrow(n));
-        }
-        /// <summary>
-        /// Создает пустой квадрат со сторонами длиной <paramref name="n"/>.
-        /// </summary>
-        /// <param name="n">Длина сторон квадрата.</param>
-        /// <returns>пустой квадрат.</returns>
-        static string GetEmptySquare(int n)
-        {
-            CheckValueGreaterThan(n, "Ожидается, что длина стороны больше 0.", nameof(n));
-
-            string square = "";
-
-            string topAndBottom = new string('X', n);
-
-            StringBuilder emptyMiddle = new StringBuilder();
-            emptyMiddle.Append('X');
-            emptyMiddle.Append(new string(' ', n - 2));
-            emptyMiddle.Append('X');
-
-            string middle = emptyMiddle.ToString();
-
-            for (int i = 1; i <= n; i++)
-            {
-                if (i == 1 || i == n)
-                    square += topAndBottom;
-                else
-                    square += middle;
-
-                square += "\n";
-            }
-
-            return square;
-        }
-
-        /// <summary>
-        /// Определяет можно ли получить <paramref name="targetWord"/>, удалив некоторые буквы из <paramref name="value"/>.
-        /// </summary>
-        /// <param name="value">слово.</param>
-        /// <returns>true, если удалось найти <paramref name="targetWord"/>, в противном случае false.</returns>
-        static bool HasWord(string value, string targetWord)
-        {
-            CheckValueGreaterThan(value.Length, "Ожидается, строка не будет пустой.", nameof(value));
-
-            int initIndex = 0;
-
-            List<char> chars = new List<char>();
-
-            for (int i = 0; i < targetWord.Length; i++)
-            {
-                for (int j = initIndex; j < value.Length; j++)
-                {
-                    if (value[j] == targetWord[i])
-                    {
-                        chars.Add(value[j]);
-                        initIndex = j + 1;
-                        break;
-                    }
-                }
-            }
-
-            string result = string.Join("", chars);
-
-            return result == targetWord;
-        }
-
-        /// <summary>
-        /// Создает список нечетных чисел в диапазоне от 1 до <paramref name="n"/>.
-        /// </summary>
-        /// <param name="n">Граница диапазона.</param>
-        /// <returns>список нечетных чисел от 1 до <paramref name="n"/>.</returns>
-        static List<int> GetOddNumbers(int n)
-        {
-            CheckValueGreaterThan(n, "Ожидается, что вводное число больше 0.", nameof(n));
-
-            List<int> numbers = new List<int>();
-
-            for (int i = 1; i <= n; i++)
-            {
-                if (i % 2 != 0)
-                    numbers.Add(i);
-            }
-
-            return numbers;
-        }
-
-        /// <summary>
-        /// Создает квадрат, заполненный символом 'X' со сторонами длиной <paramref name="n"/>.
-        /// </summary>
-        /// <param name="n">Длина сторон квадрата.</param>
-        /// <returns>квадрат.</returns>
-        static string GetSquare(int n)
-        {
-            CheckValueGreaterThan(n, "Ожидается, что длина стороны больше 0.", nameof(n));
-
-            string square = "";
-
-            for (int i = 1; i <= n; i++)
-            {
-                for (int j = 1; j <= n; j++)
-                {
-                    square += "X";
-                }
-
-                square += "\n";
-            }
-
-            return square;
+            Console.WriteLine(GetArrow(n));
         }
 
         /// <summary>
@@ -149,7 +27,7 @@ namespace Norbit.Learning
             CheckValueIsOdd(n, "Ожидается, что число будет нечетное.", nameof(n));
 
             char[][] matrix = new char[n][];
-            string result = "";
+            StringBuilder result = new StringBuilder();
             int center = n / 2;
 
             for (int i = 0; i < n; i++)
@@ -179,12 +57,12 @@ namespace Norbit.Learning
             {
                 for (int j = 0; j < n; j++)
                 {
-                    result += matrix[i][j];
+                    result.Append(matrix[i][j]);
                 }
-                result += "\n";
+                result.Append("\n");
             }
 
-            return result;
+            return result.ToString();
         }
 
         /// <summary>
@@ -200,7 +78,7 @@ namespace Norbit.Learning
             CheckValueIsOdd(n, "Ожидается, что число будет нечетное.", nameof(n));
 
             char[][] matrix = new char[n][];
-            string result = "";
+            StringBuilder result = new StringBuilder();
 
             for (int i = 0; i < n; i++)
             {
@@ -226,12 +104,12 @@ namespace Norbit.Learning
             {
                 for (int j = 0; j < n; j++)
                 {
-                    result += matrix[i][j];
+                    result.Append(matrix[i][j]);
                 }
-                result += "\n";
+                result.Append("\n");
             }
 
-            return result;
+            return result.ToString();
         }
 
         /// <summary>
@@ -247,7 +125,7 @@ namespace Norbit.Learning
             CheckValueIsOdd(n, "Ожидается, что число будет нечетное.", nameof(n));
 
             char[][] matrix = new char[n][];
-            string result = "";
+            StringBuilder result = new StringBuilder();
             int center = n / 2;
 
             for (int i = 0; i < n; i++)
@@ -276,14 +154,23 @@ namespace Norbit.Learning
             {
                 for (int j = 0; j < n; j++)
                 {
-                    result += matrix[i][j] + " ";
+                    result.Append(matrix[i][j]);
                 }
-                result += "\n";
+                result.Append("\n");
             }
 
-            return result;
+            return result.ToString();
         }
 
+        /// <summary>
+        /// Проверяет, что входные данные <paramref name="value"/> больше <paramref name="limit"/> 
+        /// и выводит <paramref name="message"/> при ошибке.
+        /// </summary>
+        /// <param name="value">Входные данные.</param>
+        /// <param name="message">Сообщение ошибки.</param>
+        /// <param name="paramName">Параметр, где произошла ошибка.</param>
+        /// <param name="limit">Недопустимое значение.</param>
+        /// <exception cref="ArgumentException"></exception>
         public static void CheckValueGreaterThan(int value, string message,
             string paramName, int limit = 0)
         {
@@ -292,6 +179,14 @@ namespace Norbit.Learning
                 throw new ArgumentException(message, paramName);
             }
         }
+
+        /// <summary>
+        /// Проверяет число <paramref name="value"/> на нечетность и выводит <paramref name="message"/> при ошибке.
+        /// </summary>
+        /// <param name="value">Входные данные для проверки.</param>
+        /// <param name="message">Сообщение ошибки.</param>
+        /// <param name="paramName">Параметр, где произошла ошибка.</param>
+        /// <exception cref="ArgumentException"></exception>
         public static void CheckValueIsOdd(int value, string message,
             string paramName)
         {
