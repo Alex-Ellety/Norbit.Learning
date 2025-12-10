@@ -17,8 +17,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Figures", "TaskTwo\Figures\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hhheeeelllloooooouuuTests", "TaskOne\hhheeeelllloooooouuuTests\hhheeeelllloooooouuuTests.csproj", "{8B79C883-5CEB-4302-BAE1-B6F9DB62B01D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shop", "Shop\Shop.csproj", "{46530B4E-E9B6-96A7-9756-090371D11B2E}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL", "SQL", "{A2501DA2-6009-4900-ABBF-386936ACC0B6}"
 	ProjectSection(SolutionItems) = preProject
 		SQL\Выборка читателей-должников.sql = SQL\Выборка читателей-должников.sql
@@ -29,6 +27,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL", "SQL", "{A2501DA2-600
 		SQL\Топ издательств по числу выданных книг.sql = SQL\Топ издательств по числу выданных книг.sql
 		SQL\Топ издательств по числу книг.sql = SQL\Топ издательств по числу книг.sql
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shop", "TaskTwo\Shop\Shop.csproj", "{5A45B096-7283-9580-87ED-96D615F276F2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -56,10 +56,10 @@ Global
 		{8B79C883-5CEB-4302-BAE1-B6F9DB62B01D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B79C883-5CEB-4302-BAE1-B6F9DB62B01D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B79C883-5CEB-4302-BAE1-B6F9DB62B01D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{46530B4E-E9B6-96A7-9756-090371D11B2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{46530B4E-E9B6-96A7-9756-090371D11B2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{46530B4E-E9B6-96A7-9756-090371D11B2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{46530B4E-E9B6-96A7-9756-090371D11B2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A45B096-7283-9580-87ED-96D615F276F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A45B096-7283-9580-87ED-96D615F276F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A45B096-7283-9580-87ED-96D615F276F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A45B096-7283-9580-87ED-96D615F276F2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -69,7 +69,7 @@ Global
 		{5B9501C9-792C-ADFB-DF44-5977C4ABA80A} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{C6127121-E80E-2F0D-D5C8-5A2EFE9B0BB7} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{20F6803C-4FB8-913A-894A-0B17C74E018C} = {C11166D6-7AB6-4AF2-AD41-6DB86E7084AA}
-		{46530B4E-E9B6-96A7-9756-090371D11B2E} = {C11166D6-7AB6-4AF2-AD41-6DB86E7084AA}
+		{5A45B096-7283-9580-87ED-96D615F276F2} = {C11166D6-7AB6-4AF2-AD41-6DB86E7084AA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C0AA95F7-F71C-476D-9D87-AAD16A829B8B}
