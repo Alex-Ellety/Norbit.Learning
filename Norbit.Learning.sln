@@ -1,34 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36518.9
+VisualStudioVersion = 17.14.36717.8
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TaskOne", "TaskOne", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TaskTwo", "TaskTwo", "{C11166D6-7AB6-4AF2-AD41-6DB86E7084AA}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmptySquare", "TaskOne\EmptySquare\EmptySquare.csproj", "{63F73069-9321-4AF2-66E7-D1C11F2691C2}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hhheeeelllloooooouuu", "TaskOne\hhheeeelllloooooouuu\hhheeeelllloooooouuu.csproj", "{5B9501C9-792C-ADFB-DF44-5977C4ABA80A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Square_OddNums", "TaskOne\Square_OddNums\Square_OddNums.csproj", "{C6127121-E80E-2F0D-D5C8-5A2EFE9B0BB7}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Figures", "TaskTwo\Figures\Figures.csproj", "{20F6803C-4FB8-913A-894A-0B17C74E018C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hhheeeelllloooooouuuTests", "TaskOne\hhheeeelllloooooouuuTests\hhheeeelllloooooouuuTests.csproj", "{8B79C883-5CEB-4302-BAE1-B6F9DB62B01D}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL", "SQL", "{A2501DA2-6009-4900-ABBF-386936ACC0B6}"
-	ProjectSection(SolutionItems) = preProject
-		SQL\Выборка читателей-должников.sql = SQL\Выборка читателей-должников.sql
-		SQL\Запрос для выборки книг, которые находятся на руках на данный момент.sql = SQL\Запрос для выборки книг, которые находятся на руках на данный момент.sql
-		SQL\Запрос для выборки книг, которые ни разу не брали читать.sql = SQL\Запрос для выборки книг, которые ни разу не брали читать.sql
-		SQL\Запрос для выборки книг, которые чаще других берут читать.sql = SQL\Запрос для выборки книг, которые чаще других берут читать.sql
-		SQL\Запрос сколько книг выдал каждый сотрудник.sql = SQL\Запрос сколько книг выдал каждый сотрудник.sql
-		SQL\Топ издательств по числу выданных книг.sql = SQL\Топ издательств по числу выданных книг.sql
-		SQL\Топ издательств по числу книг.sql = SQL\Топ издательств по числу книг.sql
-	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shop", "TaskTwo\Shop\Shop.csproj", "{5A45B096-7283-9580-87ED-96D615F276F2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Norbit.Learning", "Norbit.Learning.csproj", "{6455DC62-4ED1-1955-DBBC-920516A51D13}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,42 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{63F73069-9321-4AF2-66E7-D1C11F2691C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{63F73069-9321-4AF2-66E7-D1C11F2691C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{63F73069-9321-4AF2-66E7-D1C11F2691C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{63F73069-9321-4AF2-66E7-D1C11F2691C2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5B9501C9-792C-ADFB-DF44-5977C4ABA80A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5B9501C9-792C-ADFB-DF44-5977C4ABA80A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5B9501C9-792C-ADFB-DF44-5977C4ABA80A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5B9501C9-792C-ADFB-DF44-5977C4ABA80A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C6127121-E80E-2F0D-D5C8-5A2EFE9B0BB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C6127121-E80E-2F0D-D5C8-5A2EFE9B0BB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C6127121-E80E-2F0D-D5C8-5A2EFE9B0BB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C6127121-E80E-2F0D-D5C8-5A2EFE9B0BB7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{20F6803C-4FB8-913A-894A-0B17C74E018C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{20F6803C-4FB8-913A-894A-0B17C74E018C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{20F6803C-4FB8-913A-894A-0B17C74E018C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{20F6803C-4FB8-913A-894A-0B17C74E018C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8B79C883-5CEB-4302-BAE1-B6F9DB62B01D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8B79C883-5CEB-4302-BAE1-B6F9DB62B01D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8B79C883-5CEB-4302-BAE1-B6F9DB62B01D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8B79C883-5CEB-4302-BAE1-B6F9DB62B01D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5A45B096-7283-9580-87ED-96D615F276F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5A45B096-7283-9580-87ED-96D615F276F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5A45B096-7283-9580-87ED-96D615F276F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5A45B096-7283-9580-87ED-96D615F276F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6455DC62-4ED1-1955-DBBC-920516A51D13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6455DC62-4ED1-1955-DBBC-920516A51D13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6455DC62-4ED1-1955-DBBC-920516A51D13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6455DC62-4ED1-1955-DBBC-920516A51D13}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{63F73069-9321-4AF2-66E7-D1C11F2691C2} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
-		{5B9501C9-792C-ADFB-DF44-5977C4ABA80A} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
-		{C6127121-E80E-2F0D-D5C8-5A2EFE9B0BB7} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
-		{20F6803C-4FB8-913A-894A-0B17C74E018C} = {C11166D6-7AB6-4AF2-AD41-6DB86E7084AA}
-		{5A45B096-7283-9580-87ED-96D615F276F2} = {C11166D6-7AB6-4AF2-AD41-6DB86E7084AA}
-	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {C0AA95F7-F71C-476D-9D87-AAD16A829B8B}
+		SolutionGuid = {EC459C37-3FB9-4EEA-A28B-CEB45E818FAF}
 	EndGlobalSection
 EndGlobal
